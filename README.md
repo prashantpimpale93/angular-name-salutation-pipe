@@ -2,26 +2,51 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
-## Development server
+## Simple Custom Pipe Example:
+To generate pipe :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+ng g p my-awesome-pipe
 
-## Code scaffolding
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+then in app.module.ts:
 
-## Build
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+import { AppComponent } from './app.component';
+import { My-Awesome-Pipe } from './my-awesome-pipe.pipe';
 
-## Running unit tests
+@NgModule({
+  declarations: [
+    AppComponent,
+    My-Awesome-Pipe <-- Add in declarations array
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule { }
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Then use it as:
 
-## Running end-to-end tests
+```
+<div>{{name | my-awesome-pipe }}</div>
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<h2>About Angular Pipe:</h2>
+<div>
+  <ul>
+    <li>The Angular pipe is used when you want to modify the underlying data.</li>
+    <li>When you want to modify or update existing data then use Pipe.</li>
+    <li>Need to import and has be to added in <b>declarations</b> array of module</li>
+    <li>We can not use Pipe as for single Component (Restricted for xyxComponent only is not possible)</li>
+    <li>We can pass mulitple parameter to the transform method of Pipe by using <b><i>:</i></b> as a seperator</li>
+  </ul>
+</div>
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
