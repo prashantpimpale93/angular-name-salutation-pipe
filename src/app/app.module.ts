@@ -2,15 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { NameSalutationPipe } from './name-salutation.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NameSalutationPipe
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [NameSalutationPipe],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
