@@ -32,7 +32,7 @@ import { My-Awesome-Pipe } from './my-awesome-pipe.pipe';
 export class AppModule { }
 ```
 
-Then use it as:
+Then use it in HTML as:
 
 ```
 <div>{{name | my-awesome-pipe }}</div>
