@@ -7,7 +7,6 @@ To generate pipe :
 
 ```
 ng g p my-awesome-pipe
-
 ```
 
 then in app.module.ts:
