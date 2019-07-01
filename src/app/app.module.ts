@@ -12,7 +12,7 @@ import { NameSalutationPipe } from './name-salutation.pipe';
   imports: [
     BrowserModule
   ],
-  providers: [NameSalutationPipe],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
